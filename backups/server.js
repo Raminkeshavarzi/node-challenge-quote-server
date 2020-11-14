@@ -3,6 +3,7 @@
 
 //load the 'express' module which makes writing webservers easy
 const express = require("express");
+
 const app = express();
 
 //load the quotes JSON
@@ -17,6 +18,11 @@ app.get("/", function(request, response) {
 });
 
 //START OF YOUR CODE...
+app.get('/quotes', (req, res, next)=>{
+  
+})
+
+
 
 //...END OF YOUR CODE
 
@@ -32,3 +38,4 @@ function pickFromArray(arr) {
 const listener = app.listen(process.env.PORT, function() {
   console.log("Your app is listening on port " + listener.address().port);
 });
+
